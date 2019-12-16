@@ -1,0 +1,202 @@
+.error{
+    border: 1px solid red !important;
+}
+
+.disabledTab {
+    pointer-events: none;
+}
+
+
+
+.ajax-loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -32px; /* -1 * image width / 2 */
+    margin-top: -32px; /* -1 * image height / 2 */
+}
+
+.no-print{
+    display: none;
+}
+
+
+
+.info-box {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin-bottom: 15px;
+    min-height: 90px;
+    width: 100%;
+}
+.info-box small {
+    font-size: 14px;
+}
+.info-box .progress {
+    background: rgba(0, 0, 0, 0.2) none repeat scroll 0 0;
+    height: 2px;
+    margin: 5px -10px;
+}
+.info-box .progress, .info-box .progress .progress-bar {
+    border-radius: 0;
+}
+.info-box .progress .progress-bar {
+    background: #fff none repeat scroll 0 0;
+}
+.info-box-icon {
+    background: rgba(0, 0, 0, 0.2) none repeat scroll 0 0;
+    border-radius: 2px 0 0 2px;
+    display: block;
+    float: left;
+    font-size: 45px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    width: 90px;
+}
+.info-box-icon > img {
+    max-width: 100%;
+}
+.info-box-content {
+    margin-left: 90px;
+    padding: 5px 10px;
+}
+.info-box-number {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+}
+.progress-description, .info-box-text {
+    display: block;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.info-box-text {
+    text-transform: uppercase;
+}
+.info-box-more {
+    display: block;
+}
+.cursor{
+    cursor: pointer;
+}
+
+.ui-widget-header{
+    background: #0088CA !important;
+}
+
+
+.clearable{
+    background: #fff url(data:image/gif;base64,R0lGODlhBwAHAIAAAP///5KSkiH5BAAAAAAALAAAAAAHAAcAAAIMTICmsGrIXnLxuDMLADs=) no-repeat right -10px center;
+    border: 1px solid #999;
+    padding: 3px 18px 3px 4px; /* Use the same right padding (18) in jQ! */
+    border-radius: 3px;
+    transition: background 0.4s;
+}
+.clearable.x  { background-position: right 5px center; }
+.clearable.onX{ cursor: pointer; }
+.clearable::-ms-clear {display: none; width:0; height:0;}
+
+
+.ui-jqgrid .ui-jqgrid-sortable {
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: normal;
+}
+.ui-jqgrid-title{
+    font-size: 9px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+th.ui-th-column div {
+    white-space: normal !important;
+    height: auto !important;
+    padding: 1px;
+}
+
+.ui-jqgrid tr.jqgrow td {
+    font-size: 10px;
+}
+
+.ui-search-input input {
+    font-size: 10px;
+}
+/*.ui-jqgrid .ui-jqgrid-resize {
+    height: 100% !important;
+}*/
+
+.ui-autocomplete{
+    z-index: 9999 !important;
+}
+
+h3 {
+    font-size: 16px !important;
+}
+
+span {
+    font-size: 12px !important;
+}
+.treeview-menu a{
+    font-size: 12px !important;
+}
+
+
+
+select.ui-datepicker-month option{
+    color:#000;
+}
+.ui-datepicker-month{
+    color:#000;
+}
+
+select.ui-datepicker-year option{
+    color:#000;
+}
+.ui-datepicker-year{
+    color:#000;
+}
+/**/
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+}
+.fileUpload input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+}
+.progress {
+    margin-bottom: 0;
+}
+.error{
+
+    background: #F7D3D2;
+}
+
+
+.modal-backdrop
+{
+    opacity:.2 !important;
+    background: #000071;
+
+}
+.blurcontent{
+     -webkit-filter: blur(6px)!important; 
+    -moz-filter: blur(6px) !important; 
+    -ms-filter: blur(6px) !important; 
+    -o-filter: blur(6px) !important; 
+    filter: blur(6px) !important;; 
+}
+//===================
+
+/* Caption*/

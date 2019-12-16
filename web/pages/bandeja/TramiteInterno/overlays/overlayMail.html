@@ -1,0 +1,74 @@
+<div id="overlaymail" class="overlay" style="padding-left:150px; height:750px">
+    <div>
+        <button aria-hidden="true" data-dismiss="modal" class="close overlay_close_mail" type="button">X</button>
+    </div>
+    <div class="modal-body overlay_background" id="formGeometria" style="background-color: #ffffff; width:900px; height:520px">
+        <div>
+            <div class="box-body no-padding " style="background-color: #ffffff;">
+                <h3 id="msj_asunto"></h3>
+                <h5>
+                    <label>Usuario :</label> 
+                    <span id="msj_usuarioenvia">
+                    </span>
+                    <div class="pull-right">
+                        <label >Fecha de Envio :</label> 
+                        <span id="msj_fechaenvia">15 Feb. 2016 11:03 PM</span>
+                    </div>
+                </h5>
+                <h5>
+                    <label>Area Creaci&oacute;n :</label> 
+                    <span id="msj_areacreacion">
+                    </span>
+                    <div class="pull-right">
+                        <label >Prioridad :</label> 
+                        <span id="msj_prioridad"></span>
+                    </div>
+                </h5>
+                <h5 style="display: none">
+                    <label>Requiere Respuesta :</label> 
+                    <span id="msj_respuesta">
+                    </span>
+                    <div class="pull-right">
+                        <label >Dias de Respuesta :</label> 
+                        <span id="msj_diasrespuesta"></span>
+                    </div>
+                </h5>
+                <h5>
+                    <label>C&oacute;digo Expediente :</label> 
+                    <span id="msj_codigo_expediente">
+                    </span>
+                    <div id="btnresolver_tramite_externo" class="pull-right">
+
+
+                    </div>
+                </h5>
+                <hr>
+                <label> Mensaje: </label>
+                <p id="msj_text"></p>
+                <hr>
+                <label> Documentos: </label>
+                <div id="listareferencia">
+                </div>
+                <label> Adjuntos:</label>
+                <div id="listaadjuntos">
+                </div>
+            </div>
+            <hr>
+            <div class="pull-right">
+                <button type="button" class="btn btn-default overlay_close_mail" style="color:#ffffff;background-color:red"><i class="fa fa-times"></i> Cerrar</button>
+            </div>
+            <!--<button type="button" id="printmensaje" class="btn btn-default"><i class="fa fa-print"></i> Imprimir</button>-->
+            <!--            <div class="pull-left" style="width:110px">
+                            <a onclick="finalizarDocumento()" class="btn btn-primary btn-block margin-bottom" href="#"><i class="fa fa-envelope-o"></i> Finalizar</a>
+                        </div>-->
+            <!--<button type="button" id="btnfinalizardocumento" class="btn btn-default" style="color:#ffffff;background-color:#0088ca"><i class="fa fa-check"></i> Finalizar</button>-->
+            <!--            <button type="button" id="btnresolverdocumento" class="btn btn-default" style="color:#ffffff;background-color:#0076bb"><i class="fa fa-envelope-o"></i> Responder</button>-->
+            <div class="pull-left" style="width:110px">
+                <a class="btn btn-primary btn-block margin-bottom derivar_documento" href="#"><i class="fa fa-envelope-o"></i> Responder</a>
+            </div>
+            <div class="pull-left" style="width:110px; padding-left:5px">
+                <a class="btn btn-primary btn-block margin-bottom finalizar_documento" href="#"><i class="fa fa-check"></i> Finalizar</a>
+            </div>
+        </div>
+    </div>
+</div>

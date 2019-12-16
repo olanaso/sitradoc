@@ -1,0 +1,80 @@
+<div id="ModalDocRef_documento" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span></button>
+                <h4 class="modal-title">Agregar Referencia a Documento</h4>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-danger"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                    <input id="txtbusquedadetallada_documento" type="text" class="form-control" placeholder="Ingrese el Codigo o Asunto del Documento.">
+                </div>
+                <hr>
+                <div class="form-group" id="frombusq_detallada_documento">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Tipo de Documento</label>
+                            <select class="form-control input-sm" id="drptipodocbusqueda_documento">
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Area creaci&oacute;n</label>
+                            <select class="form-control input-sm" id="drpareabusqueda_documento">
+                            </select> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Rango fecha de creaci&oacute;n</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text"  class="form-control pull-right input-sm" id="b_fecha_inicio_documento">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right input-sm" id="b_fecha_fin_documento">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <label>Usuario creaci&oacute;n</label>
+                                <select id="txtIdusuario_creaciondocumento_documento" class="form-control input-sm">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="box-footer">
+                    <div class="pull-right">
+                        <button id="btnlimpiarbusqdetallada_documento" type="button" class="btn btn-default"><i class="fa fa-eraser" aria-hidden="true"></i> Limpiar</button>
+                        <button id="btnbusqdetallada_documento" type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i> Buscar</button>
+                    </div>
+
+                </div>
+                <br>
+                <hr>
+                <div class="form-grouppp" >
+                    <table id="gridDocumentoBusqueda_documento"></table>
+                    <div id="pagerDocumentoBusqueda_documento"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>

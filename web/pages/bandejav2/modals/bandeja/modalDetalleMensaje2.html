@@ -1,0 +1,106 @@
+<style>
+
+    .table tbody tr td,th{
+        font-size: 10px;
+        border-top: 0px !important;
+        line-height: 0.5 !important;
+        padding: 3px;
+        vertical-align: top;
+    }
+</style>
+
+<div id="ModalDetalleBandeja" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span></button>
+                <h4 id="msj_asunto" class="modal-title">Default Modal</h4>
+            </div>
+            <div class="modal-body">
+
+
+
+                <!-- /.box-header -->
+                <div class="box-body no-padding" >
+                    <table class="table table-condensed"  >
+                        <tbody>
+
+                            <tr>
+                                <th>Usuario</th>
+                                <th style="width: 10px">:</th>
+                                <td>
+                                    <span id="msj_usuarioenvia"></span>
+                                </td>
+                                 <th>Fecha Envio</th>
+                                <th style="width: 10px">:</th>
+                                <td>
+                                    <span id="msj_fechaenvia"></span>
+                                </td>
+                           
+                               
+                            </tr>
+                            <tr>
+                                <th>Area Creaci&oacute;n</th>
+                                <th style="width: 10px">:</th>
+                                <td>
+                                    <span id="msj_areacreacion"></span>
+                                </td>
+                                  <th>Prioridad</th>
+                                <th style="width: 10px">:</th>
+                                <td>
+                                    <span id="msj_prioridad"></span>
+                                </td>
+                            </tr>
+                          
+                            <tr>
+                                <th>Requiere Respuesta</th>
+                                <th style="width: 10px">:</th>
+                                <td>
+                                    <span id="msj_respuesta"></span>
+                                </td>
+                                  <th>Dias de respuesta</th>
+                                <th style="width: 10px">:</th>
+                                <td>
+                                    <span id="msj_diasrespuesta"></span>
+                                </td>
+                            </tr>
+                           
+                            <tr>
+                                <th>Codigo Expediente</th>
+                                <th style="width: 10px">:</th>
+                                <td>
+                                    <span id="msj_codigo_expediente"></span>
+                                </td>
+                                 <th></th>
+                                <th style="width: 10px"></th>
+                                <td>
+                                    <!--<div id="btnresolver_tramite_externo" class="pull-right">
+                                    </div>-->
+                                </td>
+                            </tr>
+                          
+
+
+                        </tbody></table>
+                </div>
+                <!-- /.box-body -->
+
+
+
+                <label style="font-size: 15px;font-weight: bold;"> Mensaje: </label>
+                <p id="msj_text"></p>
+                <hr>
+                <label> Documentos: </label>
+                <div id="listareferencia">
+                </div>
+                <label> <!--Adjuntos:--></label>
+                <div id="listaadjuntos">
+                </div>
+            </div>
+          
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

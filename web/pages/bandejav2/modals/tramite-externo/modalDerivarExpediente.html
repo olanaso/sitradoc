@@ -1,0 +1,54 @@
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="btn_close_modal" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">
+                    <i class="fa fa-envelope-o"></i> Derivar Expediente <i id="codigo_expediente_derivar"></i> </h4>
+            </div>
+
+            <div class="modal-body">
+                <form id="frmderivar" role="form" enctype="multipart/form-data" >
+
+
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">TIPO DE DOCUMENTO:</span>
+                            <select obligatorio id="drptipodocumento_derivar" class="form-control input-sm">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">AREA:</span>
+                            <select obligatorio id="drparea_derivar" class="form-control input-sm">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">CODIGO DE DOCUMENTO:</span>
+                            <input obligatorio id="txtcodigodocumento_derivar"  type="text" class="form-control" placeholder="" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">ASUNTO:</span>
+                            <input obligatorio id="txtAsunto_derivar"  type="text" class="form-control" placeholder="Ingrese el Asunto">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea obligatorio id="txaMensaje_derivar" name="message" id="email_message" class="form-control" placeholder="Message" style="height: 120px;"></textarea>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer clearfix">
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Descartar</button>
+                <button id="btnderivardocumento" type="button" class="btn btn-primary pull-left"> Derivar</button>
+            </div>
+
+        </div>
+    </div>
+</div>

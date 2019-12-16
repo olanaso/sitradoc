@@ -1,0 +1,138 @@
+<div id="overlayViewDocumentoMensaje" class="overlay" style="padding-left:220px">
+    <div>
+        <button aria-hidden="true" data-dismiss="modal" class="close overlay_close_docMensaje" type="button">X</button>
+    </div>
+    <div class="modal-body overlay_background" id="formGeometria" style="width:750px">
+        <h1 class="page-header" id="glyphicons">
+            <a class="anchorjs-link " href="#glyphicons" aria-label="Anchor link for: glyphicons" data-anchorjs-icon="" 
+               style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal;
+               font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+            Registrar Documento</h1>
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <form id="form_regDocumento" role="form">
+
+                        <div class="box-header">
+                            <h3 class="box-title">Registro de Documento</h3>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>Tipo Documento :</label>
+                                <select class="form-control input-sm" id="drptipodocumento_regDocumento" obligatorio="">
+                                </select>
+                            </div>  
+                            <div class="form-group col-md-6">
+                                <label>C&oacute;digo Documento :</label>
+                                <input obligatorio id="txtcodigodocumentogenerado_regDocumento" class="form-control input-sm" type="text" placeholder="Codigo Documento Generado">
+                            </div> 
+                            <div class="form-group col-md-12">
+                                <label>&Aacute;rea Destino :</label>
+                                <input id="txtareasdestino" type="text" class="form-control input-sm" placeholder="&Aacute;reas Destino">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label>Usuario Destino :</label>
+                                <input id="txtusuario_mensaje" type="text" class="form-control input-sm" placeholder="Usuarios Destino">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label>Asunto :</label>
+                                <input obligatorio id="txtAsunto_regDocumento" class="form-control input-sm" type="text" placeholder="Ingrese Asunto">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label>Descripci&oacute;n :</label>
+                                <textarea id="txaMensaje_regDocumento" obligatorio class="form-control input-sm"></textarea>
+                            </div>  
+                            <div class="form-group col-md-12" style="display: none;">
+                                <label>C&oacute;digo Expediente :</label>
+                                <input disabled="disabled" inafecto="" obligatorio id="txtCodigoexpediente_regDocumento" class="form-control input-sm" type="text" placeholder="Ingrese Codigo Expediente">
+                            </div>
+                            <hr>
+
+                            <div class="form-group col-md-6">
+                                <p><label>Requiere Respuesta (SI/NO)</label></p>
+                                <div class="btn-group" role="group" aria-label="Default button group">
+                                    <label class="radio-inline">
+                                        <input id="rbnt_rpta_si" type="radio" name="optradio" value="true"> Si
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input id="rbnt_rpta_no" type="radio" name="optradio" value="false">No
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 req_rpt">
+                                <p><label>Prioridad (1:Alta/2:Media/3:Baja) : </label></p>
+                                <div class="btn-group" role="group" aria-label="Default button group">
+                                    <!--<button type="button" onclick="setPrioridad(1);" class="btn btn-default">1</button>-->
+                                    <a onclick="setPrioridad(1);" class="btn btn-default">1</a>
+                                    <button type="button" onclick="setPrioridad(2);" class="btn btn-default">2</button>
+                                    <button type="button" onclick="setPrioridad(3);" class="btn btn-default">3</button>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 req_rpt">
+                                <p><label>Plazo D&iacute;as para Atenci&oacute;n de Documento :</label></p>
+                                <div class="btn-group" role="group" aria-label="Default button group">
+                                    <input solonumeros obligatorio id="txtplazodias" type="text" class="form-control" placeholder="Ingrese plazo en d&iacute;as">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12">
+
+                                <div class="btn-group" role="group" aria-label="Default button group">
+                                    <input style="color: red;" id="md_showfechamanual" type="checkbox"/> Fecha de registro manual</span>
+                                    <input   id="md_pre_fecha_registro_manual_recepcionExterna" style="background: #B6D0FC;display: none;"  type="text" placeholder="dd/mm/aaaa hh:ss" class="form-control clearable grilla_recibidos_recepcionExterna">
+
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <p><label>Referenciar Expediente :</label></p>
+                                <div onclick="agregarExpediente_mensaje();" style="width: 220px;" class="btn btn-default btn-file">
+                                    <i class="fa fa-folder-open-o" aria-hidden="true"></i> B&uacute;squeda de Expediente
+                                </div>
+                                <br>
+                                <br>
+                                <div id="listexpediente_mensaje">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label>Referenciar Documento :</label>
+                                <br>
+                                <div onclick="agregarReferencias_regdocumento();" style="width: 220px;" class="btn btn-default btn-file">
+                                    <i class="fa fa-paperclip"></i> B&uacute;squeda de Documento
+                                </div>
+                                <br>
+                                <br>
+                                <div id="listreferencia_regDocumento">
+                                </div> 
+                            </div>
+                            <div class="form-group col-md-12">
+                                <p class="help-block">Archivos Adjuntos (Max 2 Mb.)</p>
+                                <div>
+                                    <span class="fileUpload btn btn-default">
+                                        <span class="glyphicon glyphicon-upload"></span> Subir Archivo
+                                        <input type="file" id="uploadFile" />
+                                    </span>
+                                </div>
+                                <br>
+                                <p id="fileUploadError" class="text-danger hide"></p>
+                                <div class="list-group" id="files"></div>
+                                <!--<input id="addupload_regDocumento" onclick="generarUploadImgDoc_regDocumento('#uploadfile_regDocumento')" type="button" value="+">
+                                <div id="uploadfile_regDocumento">
+                                </div>
+                                <p class="help-block">Max. 100 MB por archivo</p>-->
+                            </div>
+                        </div>
+                        <div class="box-footer">
+                            <button id="btnNuevo_regDocumento" type="button" class="btn btn-primary btn-sm">Guardar</button>
+                            <button id="btnCancelar_regDocumento" type="button" class="btn btn-default btn-sm">Cancelar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+     
+    </div>
+</div>
+
+

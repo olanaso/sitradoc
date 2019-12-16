@@ -1,0 +1,73 @@
+<div id="overlayRecepcionInterna" class="overlay">
+    <div>
+        <button aria-hidden="true" data-dismiss="modal" class="close overlay_close_recepcion_interna" type="button">X</button>
+    </div>
+    <div id="containerViews" class="modal-body overlay_background"  >
+        <h1 class="page-header" id="glyphicons">
+            <a class="anchorjs-link " href="#glyphicons" aria-label="Anchor link for: glyphicons" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+            Recepci&oacute;n Interna</h1>
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>   
+                        <button id="btnRecibir_recepcion_interna" type="button" class="btn btn-warning "><i class="fa fa-arrow-circle-down"></i> Recibir</button>
+                    </div>
+                    <ul id="myTabs_recepcion_interna" class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home_recepcion_interna" id="home-tab_recepcion_interna" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Documentos a Recibir</a></li>
+                        <li role="presentation"><a href="#profile_recepcion_interna" role="tab" id="profile-tab_recepcion_interna" data-toggle="tab" aria-controls="profile">Documentos Recibidos</a></li>
+
+                    </ul>
+                    <div id="myTabContent_recepcion_interna" class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="home_recepcion_interna" aria-labelledby="home-tab">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i> C&oacute;digo Expediente:</i></span>
+                                <input id="pre_txtbusquedacodigo_expediente_recepcion_interna"  type="text" placeholder="Codigo Expediente" class="form-control clearable grilla_recibidos">
+                                
+                                <span class="input-group-addon"><i> C&oacute;digo Documento:</i></span>
+                                <input id="pre_txtbusquedacodigodocumento_codigo_documento"  type="text" placeholder="Codigo Documento" class="form-control clearable grilla_recibidos">
+
+                                <span class="input-group-addon" ><i >Asunto:</i></span>
+                                <input id="pre_txtasunto_recepcion_interna"  type="text" placeholder="Ingrese asunto" class="form-control clearable grilla_recibidos">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i >Remitente:</i></span>
+                                <input id="pre_remitente_recepcion_interna"  type="text" placeholder="Remitente" class="form-control clearable grilla_recibidos">
+                                <span class="input-group-addon"><i>Area:</i></span>
+                                <input id="pre_area_recepcion_interna"  type="text" placeholder="Area proveniente" class="form-control clearable grilla_recibidos">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i >Rango de fecha:</i></span>
+                                <input type="text" id="fecha_rango_busqueda_por_recibir_ri" class="form-control clearable">
+                            </div>
+                            <table id="grid_recepcion_interna"></table>
+                            <div id="pager_recepcion_interna"></div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="profile_recepcion_interna" aria-labelledby="profile-tab">
+                            <div class="input-group">
+                                    <span class="input-group-addon"><i> C&oacute;digo Expediente:</i></span>
+                                <input id="post_txtbusquedacodigo_expediente_recepcion_interna"  type="text" placeholder="Codigo Expediente" class="form-control clearable grilla_recepcionados">
+                               
+                                <span class="input-group-addon"><i>Codigo Documento:</i></span>
+                                <input id="post_txtbusquedacodigodocumento"  type="text" placeholder="Codigo Documento" class="form-control clearable grilla_recepcionados">
+                                <span class="input-group-addon" ><i >Asunto:</i></span>
+                                <input id="post_txtasunto_recepcion_interna"  type="text" placeholder="Ingrese asunto" class="form-control clearable grilla_recepcionados">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i >Remitente:</i></span>
+                                <input id="post_remitente_recepcion_interna"  type="text" placeholder="Remitente" class="form-control clearable grilla_recepcionados">
+                                <span class="input-group-addon"><i>Area:</i></span>
+                                <input id="post_area_recepcion_interna"  type="text" placeholder="Area proveniente" class="form-control clearable grilla_recepcionados">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i >Rango de fecha:</i></span>
+                                <input type="text" id="fecha_rango_busqueda_ri" class="form-control clearable">
+                            </div>
+                            <table id="gridRecibido_recepcion_interna"></table>
+                            <div id="pagerRecibido_recepcion_interna"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

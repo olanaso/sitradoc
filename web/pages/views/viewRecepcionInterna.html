@@ -1,0 +1,72 @@
+<h1 class="page-header" id="glyphicons">
+    <a class="anchorjs-link " href="#glyphicons" aria-label="Anchor link for: glyphicons" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+    Recepci&oacute;n Interna</h1>
+     <section class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>   
+                            <button id="btnRecibir" type="button" class="btn btn-warning "><i class="fa fa-arrow-circle-down"></i> Recibir</button>
+                        </div>
+                        <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Documentos a Recibir</a></li>
+                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Documentos Recibidos</a></li>
+
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i>Codigo Documento</i></span>
+                                    <input id="pre_txtbusquedacodigodocumento"  type="text" placeholder="Codigo Documento" class="form-control clearable grilla_recibidos">
+                                    <span class="input-group-addon" ><i >Asunto</i></span>
+                                    <input id="pre_txtasunto"  type="text" placeholder="Ingrese asunto" class="form-control clearable grilla_recibidos">
+
+                                </div>
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i >Remitente</i></span>
+                                    <input id="pre_remitente"  type="text" placeholder="Remitente" class="form-control clearable grilla_recibidos">
+                                    <span class="input-group-addon"><i>Area</i></span>
+                                    <input id="pre_area"  type="text" placeholder="Area proveniente" class="form-control clearable grilla_recibidos">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i >Fecha Inicio</i></span>
+                                    <input id="pre_fechaInicio"  type="text" placeholder="Fecha Inicio" class="form-control clearable grilla_recibidos">
+                                    <span class="input-group-addon"><i>Fecha Fin</i></span>
+                                    <input id="pre_fechaFin"  type="text" placeholder="Fecha Fin" class="form-control clearable grilla_recibidos">
+                                </div>
+                                <table id="grid"></table>
+                                <div id="pager"></div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i>Codigo Documento</i></span>
+                                    <input id="post_txtbusquedacodigodocumento"  type="text" placeholder="Codigo Documento" class="form-control clearable grilla_recibidos">
+                                    <span class="input-group-addon" ><i >Asunto</i></span>
+                                    <input id="post_txtasunto"  type="text" placeholder="Ingrese asunto" class="form-control clearable grilla_recibidos">
+
+                                </div>
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i >Remitente</i></span>
+                                    <input id="post_remitente"  type="text" placeholder="Remitente" class="form-control clearable grilla_recibidos">
+                                    <span class="input-group-addon"><i>Area</i></span>
+                                    <input id="post_area"  type="text" placeholder="Area proveniente" class="form-control clearable grilla_recibidos">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i >Fecha Inicio</i></span>
+                                    <input id="post_fechaInicio"  type="text" placeholder="Fecha Inicio" class="form-control clearable grilla_recibidos">
+                                    <span class="input-group-addon"><i>Fecha Fin</i></span>
+                                    <input id="post_fechaFin"  type="text" placeholder="Fecha Fin" class="form-control clearable grilla_recibidos">
+                                </div>
+                                <table id="gridRecibido"></table>
+                                <div id="pagerRecibido"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section><!-- /.content -->
+
+
+
+

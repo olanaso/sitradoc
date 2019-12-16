@@ -1,0 +1,116 @@
+<div style="" id="overlaymensaje" class="overlay">
+    <div>
+        <button aria-hidden="true" data-dismiss="modal" class="close overlay_close_mensaje" type="button">X</button>
+    </div>
+    <div class="modal-body overlay_background" id="formGeometria">
+        <form id="formMensaje">
+            <fieldset>
+                <h1 class="page-header" id="glyphicons">
+                    <a class="anchorjs-link " href="#glyphicons" aria-label="Anchor link for: glyphicons" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Componer Mensaje
+                </h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-square-o" aria-hidden="true"></i> Area Destino
+                                </span>
+                                <input id="txtareasdestino" type="text" class="form-control" placeholder="Areas Destino">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-users" aria-hidden="true"></i> Usuarios Destino
+                                </span>
+                                <input id="txtusuario_mensaje" type="text" class="form-control" placeholder="Usuarios Destino">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">ASUNTO:</span>
+                                <input UpperCase obligatorio id="txtAsunto" type="text" class="form-control" placeholder="Ingrese el Asunto">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea obligatorio id="txaMensaje" name="message" id="email_message" class="form-control" placeholder="Mensaje" style="height: 120px;"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <p class="help-block">Referenciar a Expediente :</p>
+                            <div onclick="agregarExpediente_mensaje();" style="width: 220px;" class="btn btn-default btn-file">
+                                <i class="fa fa-folder-open-o" aria-hidden="true"></i> Busqueda de Expediente
+                            </div>
+                            <br>
+                            <br>
+                            <div id="listexpediente_mensaje">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                <p class="help-block">Documentos Referencia :</p>
+                                <div onclick="agregarReferencias_mensaje();" style="width: 220px;" class="btn btn-default btn-file">
+                                    <i class="fa fa-paperclip"></i> Busqueda Documentos
+                                </div>
+                                <br>
+                                <br>
+                                <div id="listreferencia_mensaje">
+                                </div>
+                            </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+
+                         
+                            <p class="help-block">Envio a Secretaria (SI/NO)</p>
+                            <div class="btn-group" role="group" aria-label="Default button group">
+                                <label class="radio-inline">
+                                    <input id="rbnt_recepcion_si" type="radio" name="optenviorecepcion" value="true"> Si
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optenviorecepcion" value="false">No
+                                </label>
+                            </div>
+                            <p class="help-block">Requiere Respuesta (SI/NO)</p>
+                            <div class="btn-group" role="group" aria-label="Default button group">
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" value="true"> Si
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="rbnt_rpta_no" type="radio" name="optradio" value="false">No
+                                </label>
+                            </div>
+                            <p class="help-block">Prioridad (1:Alta 2: Media 3:Baja)</p>
+                            <div class="btn-group" role="group" aria-label="Default button group">
+                                <button type="button" onclick="setPrioridad(1);" class="btn btn-default">1</button>
+                                <button type="button" onclick="setPrioridad(2);" class="btn btn-default">2</button>
+                                <button type="button" onclick="setPrioridad(3);" class="btn btn-default">3</button>
+                            </div>
+                            <p class="help-block">Plazo Dias para atencion del mensaje</p>
+                            <div class="btn-group" role="group" aria-label="Default button group">
+                                <input solonumeros obligatorio id="txtplazodias" type="text" class="form-control" placeholder="Ingrese plazo en dias">
+                            </div>
+
+                        </div>
+                        <h1 class="page-header" id="glyphicons"></h1>
+                        <div class="form-group">
+                            <p class="help-block">Archivos Adjuntos</p>
+                            <input onclick="generarUploadImg('#uploadfile')" type="button" value="+">
+                            <div id="uploadfile">
+                            </div>
+                            <p class="help-block">Max. 100MB por archivo</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <button class="btn btn-default btn-sm overlay_close_mensaje" type="button">Cancelar</button>
+                <button class="btn btn-primary  btn-sm" style="color: #fff;" type="button" id="btnenviarmensaje">Enviar</button>
+            </fieldset>
+        </form>
+    </div>
+</div>

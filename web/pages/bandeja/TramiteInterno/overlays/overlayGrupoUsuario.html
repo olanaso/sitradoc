@@ -1,0 +1,68 @@
+<div style="" id="overlaygrupousuario" class="overlay">
+    <div>
+        <button aria-hidden="true" data-dismiss="modal" class="close overlay_close_group_usuario" type="button">X</button>
+    </div>
+    <div class="modal-body overlay_background" id="formGeometria">
+        <form>
+            <fieldset>
+                <h1 class="page-header" id="glyphicons">
+                        <a class="anchorjs-link " href="#glyphicons" aria-label="Anchor link for: glyphicons" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Mis grupos de Usuarios</h1>
+                <section class="content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">Lista de usuarios</h3>
+                                </div>
+                                <div id="containerGrilla" class="box-body">
+                                    <table id="grid_grupousuario"></table>
+                                    <div id="paper_grupousuario"></div>
+                                </div>
+                               
+                            </div>
+                           
+                        </div>
+            
+                        <div class="col-md-6">
+                            <form id="form" role="form">
+                                <div class="box box-primary">
+                                    <div class="box-header">
+                                        <h3 class="box-title">Registro de Area</h3>
+                                    </div>
+                                    <div class="box-body">
+                               
+                                        <div class="form-group">
+                                            <label>Area Superior :</label>
+                                            <select></select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Denominacion :</label>
+                                            <input obligatorio id="txtDenominacion" class="form-control input-sm" type="text" placeholder="Ingrese Denominacion">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Abreviatura :</label>
+                                            <input obligatorio id="txtDenominacion" class="form-control input-sm" type="text" placeholder="Ingrese Denominacion">
+                                        </div>
+                                    </div>
+                         
+                                    <div class="box-footer">
+                                        <button id="btnNuevo" type="button" class="btn btn-primary btn-sm">Guardar</button>
+                                        <button id="btnCancelar" type="button" class="btn btn-default btn-sm">Cancelar</button>
+                                    </div>
+                                </div>
+                              
+                            </form>
+                        </div>
+                    
+                    </div>
+           
+                </section>
+
+                <hr>
+                <button class="btn btn-default btn-sm overlay_close_group_usuario" type="button">Cancelar</button>
+                <button class="btn btn-primary  btn-sm" style="color: #fff;" type="button">Nuevo</button>
+            </fieldset>
+        </form>
+    </div>
+</div>

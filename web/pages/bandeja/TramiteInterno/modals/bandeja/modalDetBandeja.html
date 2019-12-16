@@ -1,0 +1,33 @@
+<div id="ModalDetalleBandeja" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span></button>
+                <h4 class="modal-title">Detalle Mensaje</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12">
+                    <div class="box-body">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i >A&ncaron;o.</i></span>
+                            <input id="txtbusquedaanio_expediente" type="text" placeholder="Ingrese el A&ncaron;o" class="form-control clearable">
+                            <span class="input-group-addon"><i>C&oacute;digo Expediente.</i></span>
+                            <input id="txtbusquedacodigoexpediente_expediente" type="text" placeholder="Codigo Expediente" class="form-control clearable">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search-plus"></i></span>
+                            <input id="txtbusqueda_expediente" type="text" placeholder="Nombres y Apellidos, DNI o Asunto, presione Enter" class="form-control clearable">
+                        </div>
+                    </div>
+                    <div id="containerGrilla_expediente" class="box-body">
+                        <table id="grid_busqueda_expediente"></table>
+                        <div id="pager_busqueda_expediente"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>

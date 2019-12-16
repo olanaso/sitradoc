@@ -1,0 +1,65 @@
+
+<h1 class="page-header" id="glyphicons">
+    <a class="anchorjs-link " href="#glyphicons" aria-label="Anchor link for: glyphicons" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+    Recepci&oacute;n Externa</h1>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+
+            <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Expedientes a Recibir</a></li>
+                <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Expedientes Recibidos</a></li>
+
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i >Año.</i></span>
+                        <input id="pre_txtbusquedaanio"  type="text" placeholder="Ingrese el Año" class="form-control clearable grilla_recibidos">
+                        <span class="input-group-addon"><i>Codigo Expediente.</i></span>
+                        <input id="pre_txtbusquedacodigoexpediente"  type="text" placeholder="Codigo Expediente" class="form-control clearable grilla_recibidos">
+
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search-plus"></i></span>
+                        <input id="pre_txtbusqueda"  type="text" placeholder="Nombres y Apellidos, DNI o Asunto, presione Enter" class="form-control clearable grilla_recibidos">
+                        <!--  <span class="input-group-addon">Cantidad</span>
+                          <input id="pre_cantidad"  type="text" placeholder="Cantidad a mostrar" class="form-control clearable grilla_recibidos">
+                        -->
+                    </div>
+                    <table id="grid_recepcion_externa"></table>
+                    <div id="pager_recepcion_externa"></div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i >Año.</i></span>
+                        <input id="post_txtbusquedaanio" type="text" placeholder="Ingrese el Año" class="form-control clearable grilla_recepcionados">
+                        <span class="input-group-addon"><i>Codigo Expediente.</i></span>
+                        <input id="post_txtbusquedacodigoexpediente" type="text" placeholder="Codigo Expediente" class="form-control clearable grilla_recepcionados">
+
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search-plus"></i></span>
+                        <input id="post_txtbusqueda" type="text" placeholder="Nombres y Apellidos, DNI o Asunto, presione Enter" class="form-control clearable grilla_recepcionados">
+                        <!--<span class="input-group-addon">Cantidad</span>
+                        <input id="post_cantidad" type="text" placeholder="Cantidad a mostrar" class="form-control clearable grilla_recepcionados">
+                        -->
+                    </div>
+                    <table id="gridRecibido"></table>
+                    <div id="pagerRecibido"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <hr>
+    <button id="btnRecibir" type="button" class="btn btn-warning "><i class="fa fa-arrow-circle-down"></i> Recibir</button>                  
+</section><!-- /.content -->
+
+
+

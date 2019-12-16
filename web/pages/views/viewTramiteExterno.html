@@ -1,0 +1,309 @@
+
+
+<section class="content">
+    <!-- MAILBOX BEGIN -->
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="">
+                <div class="">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4">
+                            <!-- BOXES are complex enough to move the .box-header around.
+                                 This is an example of having the box header within the box body -->
+
+                            <!-- Navigation - folders-->
+                            <div style="margin-top: 15px;">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li class="header" style="font-size: 25px;">Estado Expediente</li>
+                                </ul>
+                                <ul  id="listestados" class="nav nav-pills nav-stacked">
+
+                                </ul>
+                            </div>
+                        </div><!-- /.col (LEFT) -->
+                        <div class="col-md-9 col-sm-8">
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title" id="txtestadoflujo">PENDIENTES</h3>
+                                </div>
+
+                                <div id="containerGrilla_tramiteExterno" class="box-body">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i >Año.</i></span>
+                                        <input id="pre_txtbusquedaanio" type="text" placeholder="Ingrese el Año" class="form-control clearable grilla">
+                                        <span class="input-group-addon"><i>Codigo Expediente.</i></span>
+                                        <input id="pre_txtbusquedacodigoexpediente" type="text" placeholder="Codigo Expediente" class="form-control clearable grilla">
+
+                                    </div>
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-search-plus"></i></span>
+                                        <input id="pre_txtbusqueda" type="text" placeholder="Nombres y Apellidos, DNI o Asunto, presione Enter" class="form-control clearable grilla">
+                                        <!--<span class="input-group-addon">Cantidad</span>
+                                        <input id="post_cantidad" type="text" placeholder="Cantidad a mostrar" class="form-control clearable grilla_recepcionados">
+                                        -->
+                                        <span class="input-group-addon"><label style="color:#035BC7">* Para realizar una b&uacute;squeda Presione Enter</label></span>
+
+                                    </div>
+                                    <table id="grid_tramiteExterno"></table>
+                                    <div id="pager_tramiteExterno"></div>
+
+                                </div><!-- /.box-body -->
+
+
+                            </div><!-- /.box -->
+                        </div><!-- /.col (RIGHT) -->
+                    </div><!-- /.row -->
+                </div><!-- /.box-body -->
+                <div class="box-footer clearfix">
+                    <div class="pull-right">
+
+                    </div>
+                </div><!-- box-footer -->
+            </div><!-- /.box -->
+        </div><!-- /.col (MAIN) -->
+    </div>
+    <!-- MAILBOX END -->
+
+</section><!-- /.content -->
+
+<!-- COMPOSE MESSAGE MODAL -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="btn_close_modal" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">
+                    <i class="fa fa-envelope-o"></i> Derivar Expediente <i id="codigo_expediente_derivar"></i> </h4>
+            </div>
+
+            <div class="modal-body">
+                <form id="frmderivar" role="form" enctype="multipart/form-data" >
+
+
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">TIPO DE DOCUMENTO:</span>
+                            <select obligatorio id="drptipodocumento" class="form-control input-sm">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">AREA:</span>
+                            <select obligatorio id="drparea" class="form-control input-sm">
+                            </select>
+                        </div>
+                    </div>
+                    <!-- <div class="form-group">
+                         <div class="input-group">
+                             <span class="input-group-addon">PARA:</span>
+                             <input id="txtusuario" type="text" class="form-control" placeholder="Derivar a usuario">
+                         </div>
+                     </div>-->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">CODIGO DE DOCUMENTO:</span>
+                            <input obligatorio id="txtcodigodocumento"  type="text" class="form-control" placeholder="" disabled="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">ASUNTO:</span>
+                            <input obligatorio id="txtAsunto_derivar"  type="text" class="form-control" placeholder="Ingrese el Asunto">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea obligatorio id="txaMensaje_derivar" name="message" id="email_message" class="form-control" placeholder="Message" style="height: 120px;"></textarea>
+                    </div>
+                 
+                </form>
+            </div>
+            <div class="modal-footer clearfix">
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Descartar</button>
+            <button id="btnderivardocumento" type="button" class="btn btn-primary pull-left"> Derivar</button>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="mdlDetalleExpediente" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"><i class="fa fa-envelope-o"></i> Detalle de Expediente </h4>
+            </div>
+
+            <div class="modal-body">
+                <form id="frmderivar" role="form" enctype="multipart/form-data" >
+                    <h5>DATOS DEL EXPEDIENTE</h5>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">C&oacute;digo</span>
+                                    <input id="txtdt_codigo" disabled="disabled" type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Asunto</span>
+                                    <input id="txtdt_asunto" disabled="disabled" type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">&Aacute;rea</span>
+                                    <input id="txtdt_area" disabled="disabled" type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Procedimiento</span>
+                                    <input id="txtdt_procedimiento" disabled="disabled" type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Fecha Ingreso</span>
+                                    <input id="txtdt_fechaingreso" disabled="disabled" type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Fecha Recepci&oacute;n</span>
+                                    <input id="txtdt_fecharecepcion" disabled="disabled" type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5>DATOS DEL ADMINITRADO</h5>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Nro DNI/RUC</span>
+                                    <input  id="txtdt_nrodoc" disabled="disabled" type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Nombres</span>
+                                    <input id="txtdt_nombres" disabled="disabled" type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Apellidos</span>
+                                    <input id="txtdt_apellidos" disabled="disabled" type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Direcci&oacute;n</span>
+                                    <input id="txtdt_direccion" disabled="disabled" type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Tel&eacute;fonos</span>
+                                    <input id="txtdt_telefonos" disabled="disabled" type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Correo</span>
+                                    <input id="txtdt_correo" disabled="disabled" type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer clearfix">
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="mdlResolverExpediente" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"><i class="fa fa-envelope-o"></i> Estado de Expediente </h4>
+            </div>
+
+            <div class="modal-body">
+                <form id="frmderivar" role="form" enctype="multipart/form-data" >
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Estados</label>
+                                <div id="listaestadoflujo" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Observaci&oacute;n</label>
+                                <textarea id="txaobservacioncambioestado" placeholder="Ingrese alguna Observaci&oacute;n" rows="3" class="form-control"></textarea>
+                            </div>
+                            <label style="color:red" id="txtmensajealerta">
+                            </label>
+                        </div>
+
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer clearfix">
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                <button id="btncambiarestado" type="button" class="btn btn-primary pull-left"><i class="fa fa-envelope"></i> Guardar</button>
+
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+

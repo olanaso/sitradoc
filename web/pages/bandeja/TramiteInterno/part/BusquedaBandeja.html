@@ -1,0 +1,163 @@
+<div class="input-group">
+
+
+    <div class="input-group" id="adv-search">
+        <input type="text" class="form-control" placeholder="Buscar Mensajes" style="min-width:  960px;"/>
+        <div class="input-group-btn">
+            <div class="btn-group" role="group">
+                <div class="dropdown dropdown-lg">
+                    <button style="font-size: 8px;" id="btn_show_search" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                        <form class="form-horizontal" role="form" id="form_search">
+                            <div class="form-group">
+                                <label for="filter">Buscar en:</label>
+                                <select  id="optionsearch" class="form-control input-sm">
+
+                                    <option value="3">Entrada</option>
+                                    <option value="4">Salida</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="filter">Area:</label>
+                                <input id="txtareabusqueda_correo" class="form-control input-sm" type="text" placeholder="Ingrese las areas de busqueda">
+                            </div>
+                            <div class="form-group">
+                                <label for="filter">Usuario:</label>
+                                <input id="txtusuariobusqueda_correo" class="form-control input-sm" type="text" placeholder="Ingrese los usuario">
+                            </div>
+                            <div class="form-group">
+                                <label for="contain">Asunto:</label>
+                                <input id="txtAsunto_busq" class="form-control input-sm" type="text" placeholder="Ingrese asunto">
+                            </div>
+                            <div class="form-group">
+                                <label for="contain">Contiene Palabras:</label>
+                                <input id="txtMensaje_busq" class="form-control input-sm" type="text" placeholder="Ingrese palabras que contiene el contenido">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contain">Recepcion:</label>
+                                        <div class="btn-group" role="group" aria-label="Default button group">
+                                            <label class="radio-inline">
+                                                <input type="checkbox" name="opt_recepcion_busqueda" value="true" checked > Si
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="checkbox" name="opt_recepcion_busqueda" value="false" checked> No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contain">Respuesta:</label>
+                                        <div class="btn-group" role="group" aria-label="Default button group">
+                                            <label class="radio-inline">
+                                                <input  name="opt_respuesta_busqueda" value="true" type="checkbox" checked> Si
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input name="opt_respuesta_busqueda" value="false" type="checkbox" checked> No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contain">Prioridad:</label>
+                                        <div class="btn-group" role="group" aria-label="Default button group">
+                                            <label class="radio-inline">
+                                                <input name="opt_prioridad_busqueda" value="1" type="checkbox" checked> Alta
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input name="opt_prioridad_busqueda" value="2" type="checkbox" checked> Media
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input name="opt_prioridad_busqueda" value="3" type="checkbox" checked> Baja
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="contain">Estado Atencion:</label>
+                                        <div class="btn-group" role="group" aria-label="Default button group">
+                                            <label class="radio-inline">
+                                                <input  id="estado_vigente" name="opt_estado_atencion_busqueda" value="true" type="checkbox" checked> Vigentes 
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input id="estado_vencido" name="opt_estado_atencion_busqueda" value="false" type="checkbox" checked> Vencidos
+                                            </label>
+
+                                        </div>
+                                    </div> 
+                                </div>
+                                
+                                  <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="contain">Proviene de Tramite Externo:</label>
+                                        <div class="btn-group" role="group" aria-label="Default button group">
+                                            <label class="radio-inline">
+                                                 <label class="radio-inline">
+                                                <input  id="buq_proviene_tramite_externo_si" name="opt_buq_proviene_tramite_externo" value="true" type="checkbox" checked> SI 
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input id="buq_proviene_tramite_externo_no" name="opt_buq_proviene_tramite_externo" value="false" type="checkbox" checked> NO
+                                            </label>
+                                                <br>
+                                                 <i> C&oacute;digo Exp.</i>
+                                                 <input  id="busq_codigo_expediente"  value="" type="input" checked> 
+                                            </label>
+                                            
+
+                                        </div>
+                                    </div> 
+                                </div>
+                                
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="contain"> Leido ?:</label>
+                                        <div class="btn-group" role="group" aria-label="Default button group">
+                                            <label class="radio-inline">
+                                                <i>  SI/NO</i> 
+                                                <input  id="busq_estado_leido"  value="false" type="checkbox" checked> 
+                                                
+                                           </label>
+                                            
+
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <label for="contain">Rango Fecha:</label>
+                                    <input type="text" id="fecha_rango_busqueda" class="form-control">
+
+                                </div>
+                            </div>
+
+                            <hr>
+                            <div class="btn-group" role="group" aria-label="Default button group">
+                                <button id="btnsearch_avanzado" type="button" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                </button>
+                            </div>
+
+
+
+
+                        </form>
+                    </div>
+                </div>
+                <button  type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+            </div>
+        </div>
+    </div>
+
+</div>

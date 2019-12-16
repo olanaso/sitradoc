@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+    <mvc:annotation-driven/>
+    
+    <bean name="Route" class="mph.tramitedoc.route.Route" />
+    
+    <bean name="Anio" class="mph.tramitedoc.controller.AnioController" />
+    <bean name="Area" class="mph.tramitedoc.controller.AreaController" />
+    <bean name="Cargo" class="mph.tramitedoc.controller.CargoController" />
+    <bean name="Estadoflujo" class="mph.tramitedoc.controller.EstadoflujoController" />
+    <bean name="Expediente" class="mph.tramitedoc.controller.ExpedienteController" />
+    <bean name="ExpedienteOnlineController" class="mph.tramitedoc.controller.ExpedienteOnlineController" />
+    <bean name="Expedienterequisito" class="mph.tramitedoc.controller.ExpedienterequisitoController" />
+    <bean name="Feriado" class="mph.tramitedoc.controller.FeriadoController" />
+    <bean name="Flujo" class="mph.tramitedoc.controller.FlujoController" />
+    <bean name="Modulo" class="mph.tramitedoc.controller.ModuloController" />
+    <bean name="Procedimiento" class="mph.tramitedoc.controller.ProcedimientoController" />
+    <bean name="Requisitos" class="mph.tramitedoc.controller.RequisitosController" />
+    <bean name="Rol" class="mph.tramitedoc.controller.RolController" />
+    <bean name="Rolmodulo" class="mph.tramitedoc.controller.RolmoduloController" />
+    <bean name="Usuario" class="mph.tramitedoc.controller.UsuarioController" />
+    <bean name="Usuariocargo" class="mph.tramitedoc.controller.UsuariocargoController" />
+    <bean name="Usuariorol" class="mph.tramitedoc.controller.UsuariorolController" />
+    <bean name="Tipodocumento" class="mph.tramitedoc.controller.TipodocumentoController" />
+    <bean name="Tipoprocedimiento" class="mph.tramitedoc.controller.TipoprocedimientoController" />
+    <bean name="DocumentoController" class="mph.tramitedoc.controller.DocumentoController" />
+    <bean name="BandejaController" class="mph.tramitedoc.controller.BandejaController" />
+    <bean name="MensajeController" class="mph.tramitedoc.controller.MensajeController" />
+    <bean name="EstadisticaController" class="mph.tramitedoc.controller.EstadisticaController" />
+    <bean name="FTPController" class="mph.tramitedoc.controller.FTPController" />
+    <bean name="UploaderController" class="mph.tramitedoc.controller.UploaderController" />
+    <bean name="SqlController" class="mph.tramitedoc.controller.SqlController" />
+
+    
+    <bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
+        <property name="prefixJson" value="true"/>
+    </bean>
+    
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- max upload size in bytes -->
+        <property name="maxUploadSize" value="2097152000" /> <!-- 100MB -->
+        <!-- max size of file in memory (in bytes) -->
+        <property name="maxInMemorySize" value="104857600" /> <!-- 50MB -->
+    </bean>
+    
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/pages/</value>
+        </property>
+        
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+    
+    <mvc:resources mapping="/**" location="/**"/>
+   
+   
+
+</beans>
